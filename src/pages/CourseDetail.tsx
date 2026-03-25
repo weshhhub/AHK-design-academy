@@ -59,42 +59,7 @@ const courseData: Record<string, any> = {
 
 export default function CourseDetail() {
   const { id } = useParams();
-  const [isDownloading, setIsDownloading] = React.useState(false);
   const course = id ? courseData[id] : null;
-
-  const handleDownload = async (e: React.MouseEvent) => {
-    e.preventDefault();
-    if (isDownloading) return;
-
-    setIsDownloading(true);
-    console.log(`Starting download for course: ${id}`);
-    
-    try {
-      const response = await fetch(`/brochure/${id}.pdf`);
-      if (!response.ok) throw new Error('Download failed');
-      
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = `${id}-brochure.pdf`;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      window.URL.revokeObjectURL(url);
-    } catch (error) {
-      console.error('Download error:', error);
-      // Fallback to simple link if fetch fails
-      const link = document.createElement('a');
-      link.href = `/brochure/${id}.pdf`;
-      link.download = `${id}-brochure.pdf`;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    } finally {
-      setIsDownloading(false);
-    }
-  };
 
   if (!course) return <div className="pt-32 text-center">Course not found.</div>;
 
@@ -148,13 +113,13 @@ export default function CourseDetail() {
               <Link to={`/enroll?course=${id}`} className="w-full btn-accent flex items-center justify-center gap-2 mb-4">
                 Enroll Now <ArrowRight className="w-4 h-4" />
               </Link>
-              <button
-                onClick={handleDownload}
-                disabled={isDownloading}
-                className={`w-full btn-outline flex items-center justify-center gap-2 cursor-pointer select-none ${isDownloading ? 'opacity-50 cursor-not-allowed' : ''}`}
+              <a
+                href={`/brochure/${id}.pdf`}
+                download
+                className="w-full btn-outline flex items-center justify-center gap-2"
               >
-                {isDownloading ? 'Downloading...' : 'Download Brochure'} <Download className="w-4 h-4" />
-              </button>
+                Download Brochure <Download className="w-4 h-4" />
+              </a>
             </div>
           </div>
         </div>
