@@ -1,12 +1,17 @@
 import { motion } from 'motion/react';
-
+import villa from "../assets/projects/villa.jpg";
+import scandi from "../assets/projects/scandi.webp";
+import office from "../assets/projects/RECEPTION AREA.jpg";
+import kitchen from "../assets/projects/kitchen.jpg";
+import urban from "../assets/projects/urban.jpg";
+import bedroom from "../assets/projects/bedroom.jpg";
 const projects = [
-  { title: "Modern Villa", category: "Architecture", image: "https://picsum.photos/seed/villa/600/600" },
-  { title: "Scandi Interior", category: "Interior", image: "https://picsum.photos/seed/scandi/600/600" },
-  { title: "Office Lobby", category: "Commercial", image: "https://picsum.photos/seed/office/600/600" },
-  { title: "Kitchen Detail", category: "Interior", image: "https://picsum.photos/seed/kitchen/600/600" },
-  { title: "Urban Plaza", category: "Architecture", image: "https://picsum.photos/seed/urban/600/600" },
-  { title: "Master Bedroom", category: "Interior", image: "https://picsum.photos/seed/bedroom/600/600" }
+  { title: "Modern Villa", category: "Architecture", image: villa },
+  { title: "Scandi Interior", category: "Interior", image: scandi },
+  { title: "Office Lobby", category: "Commercial", image: office },
+  { title: "Kitchen Detail", category: "Interior", image: kitchen },
+  { title: "Urban Plaza", category: "Architecture", image: urban },
+  { title: "Master Bedroom", category: "Interior", image: bedroom }
 ];
 
 export default function Portfolio() {

@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { GraduationCap, Award, Target, Heart } from 'lucide-react';
-
+import aboutImage from "../assets/images/about.png";
 export default function About() {
   return (
     <div className="pt-32 pb-24">
@@ -14,21 +14,20 @@ export default function About() {
 
         <div className="grid md:grid-cols-2 gap-16 items-center mb-24">
           <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl">
-            <img 
-              src="https://picsum.photos/seed/instructor/800/800" 
-              alt="Our Founder" 
-              className="w-full h-full object-cover"
-              referrerPolicy="no-referrer"
-            />
+            <img
+  src={aboutImage}
+  alt="About AHK Design Academy"
+  className="w-full rounded-xl"
+/>
           </div>
           <div>
             <h2 className="text-3xl mb-6">Meet Your Instructor</h2>
-            <p className="text-gray-600 mb-6 leading-relaxed">
-              With over 10 years of experience in architectural visualization and interior design, our lead instructor has worked on some of the most iconic projects in East Africa.
-            </p>
-            <p className="text-gray-600 mb-8 leading-relaxed">
-              "I started AHK because I saw so many talented students struggling to present their ideas effectively. My goal is to give you the tools and the confidence to compete on a global stage."
-            </p>
+          <p className="text-gray-600 mb-6 leading-relaxed">
+  With practical experience in architectural visualization and interior design, our lead instructor focuses on real-world workflows used in professional projects.
+</p>
+<p className="text-gray-600 mb-8 leading-relaxed italic">
+  "AHK Design Academy was created to bridge the gap between learning software and producing real, professional work. The goal is to equip you with skills that actually translate into opportunities."
+</p>
             <div className="flex gap-8">
               <div>
                 <p className="text-3xl font-bold text-accent">10+</p>

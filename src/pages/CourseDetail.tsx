@@ -1,6 +1,10 @@
+import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { Clock, Laptop, CheckCircle2, ArrowRight, Download } from 'lucide-react';
+import fullProgramImg from "../assets/images/full-program.jpg";
+import modelingImg from "../assets/images/sketchupmodelling.png";
+import renderingImg from "../assets/images/rendering.png";
 
 const courseData: Record<string, any> = {
   "full-program": {
@@ -8,7 +12,7 @@ const courseData: Record<string, any> = {
     price: "KSh 30,000",
     duration: "8 Weeks",
     tools: ["SketchUp", "Enscape", "V-Ray", "D5", "Photoshop"],
-    image: "https://picsum.photos/seed/full/1200/600",
+    image: fullProgramImg,
     description: "The ultimate workflow from 2D/3D modeling to high-end visualization. This course covers everything you need to know to create professional architectural renders from scratch.",
     modules: [
       { week: "Week 1-2", title: "Advanced SketchUp Modeling", desc: "Architecture & Interiors modeling techniques." },
@@ -24,7 +28,7 @@ const courseData: Record<string, any> = {
     price: "KSh 20,000",
     duration: "6 Weeks",
     tools: ["SketchUp"],
-    image: "https://picsum.photos/seed/modeling/1200/600",
+    image: modelingImg,
     description: "Focus on precision modeling for architecture and interior design. Learn how to build clean, organized models that are ready for rendering.",
     modules: [
       { week: "Week 1", title: "SketchUp Interface", desc: "Mastering the basics and shortcuts." },
@@ -40,7 +44,7 @@ const courseData: Record<string, any> = {
     price: "KSh 10,000",
     duration: "6 Weeks",
     tools: ["Enscape", "V-Ray", "D5", "Twinmotion"],
-    image: "https://picsum.photos/seed/rendering/1200/600",
+    image: renderingImg,
     description: "Transform your models into photorealistic masterpieces. This course is for those who already know how to model but want to master visualization.",
     modules: [
       { week: "Week 1", title: "Enscape Fundamentals", desc: "Real-time rendering for fast results." },
@@ -55,14 +59,49 @@ const courseData: Record<string, any> = {
 
 export default function CourseDetail() {
   const { id } = useParams();
+  const [isDownloading, setIsDownloading] = React.useState(false);
   const course = id ? courseData[id] : null;
+
+  const handleDownload = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (isDownloading) return;
+
+    setIsDownloading(true);
+    console.log(`Starting download for course: ${id}`);
+    
+    try {
+      const response = await fetch(`/brochure/${id}.pdf`);
+      if (!response.ok) throw new Error('Download failed');
+      
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `${id}-brochure.pdf`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Download error:', error);
+      // Fallback to simple link if fetch fails
+      const link = document.createElement('a');
+      link.href = `/brochure/${id}.pdf`;
+      link.download = `${id}-brochure.pdf`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } finally {
+      setIsDownloading(false);
+    }
+  };
 
   if (!course) return <div className="pt-32 text-center">Course not found.</div>;
 
   return (
     <div className="pt-20 pb-24">
       <div className="relative h-[50vh] overflow-hidden">
-        <img src={course.image} alt={course.title} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+        <img src={course.image} alt={course.title} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/60 flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
@@ -106,11 +145,15 @@ export default function CourseDetail() {
                 <li className="flex items-center gap-3 text-gray-600"><CheckCircle2 className="w-5 h-5 text-accent" /> Certificate of Completion</li>
                 <li className="flex items-center gap-3 text-gray-600"><CheckCircle2 className="w-5 h-5 text-accent" /> Job Placement Support</li>
               </ul>
-              <Link to="/enroll" className="w-full btn-accent flex items-center justify-center gap-2 mb-4">
+              <Link to={`/enroll?course=${id}`} className="w-full btn-accent flex items-center justify-center gap-2 mb-4">
                 Enroll Now <ArrowRight className="w-4 h-4" />
               </Link>
-              <button className="w-full btn-outline flex items-center justify-center gap-2">
-                Download Brochure <Download className="w-4 h-4" />
+              <button
+                onClick={handleDownload}
+                disabled={isDownloading}
+                className={`w-full btn-outline flex items-center justify-center gap-2 cursor-pointer select-none ${isDownloading ? 'opacity-50 cursor-not-allowed' : ''}`}
+              >
+                {isDownloading ? 'Downloading...' : 'Download Brochure'} <Download className="w-4 h-4" />
               </button>
             </div>
           </div>

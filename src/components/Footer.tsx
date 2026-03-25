@@ -1,4 +1,4 @@
-import { GraduationCap, Instagram, Twitter, Facebook, Mail, Phone } from 'lucide-react';
+import { GraduationCap, Instagram, Youtube, Facebook, Mail, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
@@ -16,13 +16,36 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-gray-400 max-w-sm mb-6">
-              Empowering the next generation of Kenyan architects and designers with industry-standard 3D modeling and visualization skills.
+              Helping designers master 3D modeling and rendering with real-world, industry-ready skills.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="p-2 bg-white/5 rounded-full hover:bg-accent transition-colors"><Instagram className="w-5 h-5" /></a>
-              <a href="#" className="p-2 bg-white/5 rounded-full hover:bg-accent transition-colors"><Twitter className="w-5 h-5" /></a>
-              <a href="#" className="p-2 bg-white/5 rounded-full hover:bg-accent transition-colors"><Facebook className="w-5 h-5" /></a>
-            </div>
+  <a 
+    href="https://instagram.com/ahk_designacademy?igsh=dXYxNWRqeDk1MzNh" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="p-2 bg-white/5 rounded-full hover:bg-accent transition-colors"
+  >
+    <Instagram className="w-5 h-5" />
+  </a>
+
+  <a 
+    href="https://youtube.com/@AHKDesignAcademy" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="p-2 bg-white/5 rounded-full hover:bg-accent transition-colors"
+  >
+    <Youtube className="w-5 h-5" />
+  </a>
+
+  <a 
+    href="https://facebook.com/share/1D9N79vDMK/" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="p-2 bg-white/5 rounded-full hover:bg-accent transition-colors"
+  >
+    <Facebook className="w-5 h-5" />
+  </a>
+</div>
           </div>
           
           <div>
@@ -39,8 +62,8 @@ export default function Footer() {
             <h4 className="text-lg mb-6">Contact Us</h4>
             <ul className="flex flex-col gap-4 text-gray-400">
               <li className="flex items-center gap-2"><Mail className="w-4 h-4 text-accent" /> info@ahkdesign.com</li>
-              <li className="flex items-center gap-2"><Phone className="w-4 h-4 text-accent" /> +254 700 000 000</li>
-              <li className="text-sm">Nairobi, Kenya (Online Only)</li>
+              <li className="flex items-center gap-2"><Phone className="w-4 h-4 text-accent" /> +254 736 935 458</li>
+              <li className="text-sm">Remote (Online classes available)</li>
             </ul>
           </div>
         </div>

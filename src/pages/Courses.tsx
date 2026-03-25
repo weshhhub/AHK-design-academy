@@ -1,4 +1,7 @@
 import CourseCard from '../components/CourseCard';
+import fullProgramImg from "../assets/images/full-program.jpg";
+import modelingImg from "../assets/images/sketchupmodelling.png";
+import renderingImg from "../assets/images/rendering.png";
 
 const allCourses = [
   {
@@ -7,7 +10,7 @@ const allCourses = [
     price: "KSh 30,000",
     duration: "8 Weeks",
     tools: ["SketchUp", "Enscape", "V-Ray", "D5"],
-    image: "https://picsum.photos/seed/full/600/400",
+    image: fullProgramImg,
     description: "The ultimate workflow from 2D/3D modeling to high-end visualization."
   },
   {
@@ -16,7 +19,7 @@ const allCourses = [
     price: "KSh 20,000",
     duration: "6 Weeks",
     tools: ["SketchUp"],
-    image: "https://picsum.photos/seed/modeling/600/400",
+    image: modelingImg,
     description: "Focus on precision modeling for architecture and interior design."
   },
   {
@@ -25,7 +28,7 @@ const allCourses = [
     price: "KSh 10,000",
     duration: "6 Weeks",
     tools: ["Enscape", "V-Ray", "D5", "Twinmotion"],
-    image: "https://picsum.photos/seed/rendering/600/400",
+    image: renderingImg,
     description: "Transform your models into photorealistic masterpieces."
   }
 ];

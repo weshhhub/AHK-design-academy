@@ -30,7 +30,7 @@ export default function App() {
         
         {/* WhatsApp Floating Button */}
         <a 
-          href="https://wa.me/254700000000?text=Hi%20AHK%20Design%20Academy,%20I'm%20interested%20in%20enrolling%20for%20a%20course."
+          href="https://wa.me/254736935458?text=Hi%20AHK%20Design%20Academy,%20I'm%20interested%20in%20enrolling%20for%20a%20course."
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform active:scale-95 flex items-center justify-center"

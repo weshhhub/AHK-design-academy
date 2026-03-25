@@ -58,7 +58,7 @@ export default function CourseCard({ id, title, price, duration, tools, image, d
             Details
           </Link>
           <Link 
-            to="/enroll" 
+            to={`/enroll?course=${id}`} 
             className="flex-grow btn-accent flex items-center justify-center gap-2 py-2 text-sm"
           >
             Enroll

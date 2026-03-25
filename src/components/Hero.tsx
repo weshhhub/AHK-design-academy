@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { ArrowRight, CheckCircle2, PlayCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import heroImage from "../assets/images/hero.png";
 
 export default function Hero() {
   return (
@@ -66,11 +67,10 @@ export default function Hero() {
           >
             <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl border-8 border-white">
               <img 
-                src="https://picsum.photos/seed/architecture/800/800" 
-                alt="3D Visualization Render" 
-                className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
-              />
+  src={heroImage}
+  alt="3D Visualization Render" 
+  className="w-full h-full object-cover rounded-2xl shadow-xl"
+/>
             </div>
             {/* Floating Card */}
             <div className="absolute -bottom-6 -left-6 glass p-6 rounded-xl max-w-[200px] hidden md:block">

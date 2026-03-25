@@ -2,34 +2,38 @@ import Hero from '../components/Hero';
 import CourseCard from '../components/CourseCard';
 import { motion } from 'motion/react';
 import { Award, Users, BookOpen, MessageSquare } from 'lucide-react';
-
+import { Link } from 'react-router-dom';
+import workspaceImage from "../assets/images/workspace.jpg";
+import fullProgramImg from "../assets/images/full-program.jpg";
+import modelingImg from "../assets/images/sketchupmodelling.png";
+import renderingImg from "../assets/images/rendering.png";
 const courses = [
   {
     id: "full-program",
-    title: "Full Program",
+    title: "3D Modeling & Rendering (Full Program)",
     price: "KSh 30,000",
-    duration: "8 Weeks",
-    tools: ["SketchUp", "Enscape", "V-Ray", "D5"],
-    image: "https://picsum.photos/seed/full/600/400",
-    description: "The ultimate workflow from 2D/3D modeling to high-end visualization."
+    duration: "6–8 Weeks",
+    tools: ["SketchUp", "Enscape", "V-Ray", "D5 Render", "Twinmotion"],
+    image: fullProgramImg,
+    description: "Master the complete workflow from SketchUp modeling to photorealistic rendering. Ideal for students and freelancers who want to create professional interior and exterior visualizations."
   },
   {
     id: "modeling-only",
-    title: "Modeling Only",
+    title: "SketchUp Modeling",
     price: "KSh 20,000",
     duration: "6 Weeks",
     tools: ["SketchUp"],
-    image: "https://picsum.photos/seed/modeling/600/400",
-    description: "Focus on precision modeling for architecture and interior design."
+    image: modelingImg,
+    description: "Learn how to create clean, accurate 3D models for architectural and interior projects. Perfect for beginners or those focusing on design development."
   },
   {
     id: "rendering-only",
-    title: "Rendering Only",
+    title: "Rendering & Visualization",
     price: "KSh 10,000",
     duration: "6 Weeks",
-    tools: ["Enscape", "V-Ray", "D5", "Twinmotion"],
-    image: "https://picsum.photos/seed/rendering/600/400",
-    description: "Transform your models into photorealistic masterpieces."
+    tools: ["Enscape", "V-Ray", "D5 Render", "Twinmotion"],
+    image: renderingImg,
+    description: "Turn your models into high-quality, realistic visuals using industry-standard rendering tools for interiors and exteriors."
   }
 ];
 
@@ -121,12 +125,11 @@ export default function Home() {
             
             <div className="relative">
               <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src="https://picsum.photos/seed/workspace/800/600" 
-                  alt="Learning Environment" 
-                  className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
-                />
+               <img 
+  src={workspaceImage}
+  alt="Learning Environment" 
+  className="w-full h-full object-cover"
+/>
               </div>
               <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-accent/20 blur-3xl rounded-full" />
             </div>
@@ -143,8 +146,8 @@ export default function Home() {
               Don't miss out on our next intake. Join hundreds of successful students who have transformed their careers with AHK.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <button className="btn-accent text-lg px-10">Secure My Spot</button>
-              <button className="btn-outline text-lg px-10">Contact Support</button>
+              <Link to="/enroll" className="btn-accent text-lg px-10 flex items-center justify-center">Secure My Spot</Link>
+              <a href="https://wa.me/254736935458" target="_blank" rel="noopener noreferrer" className="btn-outline text-lg px-10 flex items-center justify-center">Contact Support</a>
             </div>
             <p className="mt-6 text-sm text-gray-400 italic">
               * Limited to 20 students per intake to ensure quality guidance.
