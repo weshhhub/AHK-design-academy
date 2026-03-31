@@ -1,7 +1,6 @@
 import { motion } from 'motion/react';
 import { ArrowRight, CheckCircle2, PlayCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import heroImage from "../assets/images/hero.png";
 
 export default function Hero() {
   return (
@@ -67,7 +66,7 @@ export default function Hero() {
           >
             <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl border-8 border-white">
               <img 
-  src={heroImage}
+  src="/images/hero.png"
   alt="3D Visualization Render" 
   className="w-full h-full object-cover rounded-2xl shadow-xl"
 />

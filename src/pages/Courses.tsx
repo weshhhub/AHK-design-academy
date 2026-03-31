@@ -1,7 +1,4 @@
 import CourseCard from '../components/CourseCard';
-import fullProgramImg from "../assets/images/full-program.jpg";
-import modelingImg from "../assets/images/sketchupmodelling.png";
-import renderingImg from "../assets/images/rendering.png";
 
 const allCourses = [
   {
@@ -10,7 +7,7 @@ const allCourses = [
     price: "KSh 30,000",
     duration: "8 Weeks",
     tools: ["SketchUp", "Enscape", "V-Ray", "D5"],
-    image: fullProgramImg,
+    image: "/images/full-program.jpg",
     description: "The ultimate workflow from 2D/3D modeling to high-end visualization."
   },
   {
@@ -19,7 +16,7 @@ const allCourses = [
     price: "KSh 20,000",
     duration: "6 Weeks",
     tools: ["SketchUp"],
-    image: modelingImg,
+    image: "/images/sketchupmodelling.png",
     description: "Focus on precision modeling for architecture and interior design."
   },
   {
@@ -28,7 +25,7 @@ const allCourses = [
     price: "KSh 10,000",
     duration: "6 Weeks",
     tools: ["Enscape", "V-Ray", "D5", "Twinmotion"],
-    image: renderingImg,
+    image: "/images/rendering.png",
     description: "Transform your models into photorealistic masterpieces."
   }
 ];

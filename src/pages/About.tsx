@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { GraduationCap, Award, Target, Heart } from 'lucide-react';
-import aboutImage from "../assets/images/about.png";
+
 export default function About() {
   return (
     <div className="pt-32 pb-24">
@@ -15,7 +15,7 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-16 items-center mb-24">
           <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl">
             <img
-  src={aboutImage}
+  src="/images/about.png"
   alt="About AHK Design Academy"
   className="w-full rounded-xl"
 />

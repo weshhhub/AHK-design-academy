@@ -8,12 +8,12 @@ export default function Enroll() {
   const [searchParams] = useSearchParams();
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [selectedCourse, setSelectedCourse] = useState('');
 
   useEffect(() => {
     const courseParam = searchParams.get('course');
     if (courseParam) {
-      // Map URL params to option values if necessary, or just set it
       if (courseParam === 'full-program') setSelectedCourse('Full Program (KSh 30,000)');
       else if (courseParam === 'modeling-only') setSelectedCourse('Modeling Only (KSh 20,000)');
       else if (courseParam === 'rendering-only') setSelectedCourse('Rendering Only (KSh 10,000)');
@@ -22,14 +22,12 @@ export default function Enroll() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setError(null);
 
     const form = e.currentTarget;
     const formData = new FormData(form);
 
-    // 👇 Extract values properly
     const rawDate = String(formData.get('start_date') || '');
-
-    // 👇 Format date nicely (optional but better)
     const formattedDate = rawDate
       ? new Date(rawDate).toLocaleDateString('en-GB', {
           day: '2-digit',
@@ -48,20 +46,30 @@ export default function Enroll() {
       start_date: formattedDate,
     };
 
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      console.error('EmailJS configuration is missing. Please set VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, and VITE_EMAILJS_PUBLIC_KEY in your environment variables.');
+      setError('Enrollment service is currently not configured. Please contact support or try again later.');
+      return;
+    }
+
     try {
       setLoading(true);
       await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        serviceId,
+        templateId,
         templateParams,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        publicKey
       );
 
       setSubmitted(true);
       form.reset();
-    } catch (error) {
-      console.error('EmailJS error:', error);
-      alert('Something went wrong. Try again.');
+    } catch (err) {
+      console.error('EmailJS error:', err);
+      setError('Something went wrong with the email service. Please check your connection or try again later.');
     } finally {
       setLoading(false);
     }
@@ -133,6 +141,11 @@ export default function Enroll() {
             className="bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-gray-100"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
+              {error && (
+                <div className="p-4 bg-red-50 border border-red-100 text-red-600 rounded-xl text-sm">
+                  {error}
+                </div>
+              )}
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-gray-700">Full Name</label>

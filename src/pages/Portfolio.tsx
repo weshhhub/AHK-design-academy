@@ -1,17 +1,12 @@
 import { motion } from 'motion/react';
-import villa from "../assets/projects/villa.jpg";
-import scandi from "../assets/projects/scandi.webp";
-import office from "../assets/projects/RECEPTION AREA.jpg";
-import kitchen from "../assets/projects/kitchen.jpg";
-import urban from "../assets/projects/urban.jpg";
-import bedroom from "../assets/projects/bedroom.jpg";
+
 const projects = [
-  { title: "Modern Villa", category: "Architecture", image: villa },
-  { title: "Scandi Interior", category: "Interior", image: scandi },
-  { title: "Office Lobby", category: "Commercial", image: office },
-  { title: "Kitchen Detail", category: "Interior", image: kitchen },
-  { title: "Urban Plaza", category: "Architecture", image: urban },
-  { title: "Master Bedroom", category: "Interior", image: bedroom }
+  { title: "Modern Villa", category: "Architecture", image: "/projects/villa.jpg" },
+  { title: "Scandi Interior", category: "Interior", image: "/projects/scandi.webp" },
+  { title: "Office Lobby", category: "Commercial", image: "/projects/RECEPTION AREA.jpg" },
+  { title: "Kitchen Detail", category: "Interior", image: "/projects/kitchen.jpg" },
+  { title: "Urban Plaza", category: "Architecture", image: "/projects/urban.jpg" },
+  { title: "Master Bedroom", category: "Interior", image: "/projects/bedroom.jpg" }
 ];
 
 export default function Portfolio() {

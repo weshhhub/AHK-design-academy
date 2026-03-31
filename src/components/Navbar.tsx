@@ -2,7 +2,6 @@ import { motion, AnimatePresence } from "motion/react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, GraduationCap } from "lucide-react";
 import { useState } from "react";
-import logo from "../assets/images/1.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +21,7 @@ export default function Navbar() {
 
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-           <img src={logo} className="h-10 w-auto" />
+           <img src="/images/1.png" className="h-10 w-auto" />
             <span className="text-xl font-bold tracking-tight">
               AHK <span className="text-accent">DESIGN</span> ACADEMY
             </span>

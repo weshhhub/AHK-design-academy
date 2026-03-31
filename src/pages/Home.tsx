@@ -3,10 +3,6 @@ import CourseCard from '../components/CourseCard';
 import { motion } from 'motion/react';
 import { Award, Users, BookOpen, MessageSquare } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import workspaceImage from "../assets/images/workspace.jpg";
-import fullProgramImg from "../assets/images/full-program.jpg";
-import modelingImg from "../assets/images/sketchupmodelling.png";
-import renderingImg from "../assets/images/rendering.png";
 const courses = [
   {
     id: "full-program",
@@ -14,7 +10,7 @@ const courses = [
     price: "KSh 30,000",
     duration: "6–8 Weeks",
     tools: ["SketchUp", "Enscape", "V-Ray", "D5 Render", "Twinmotion"],
-    image: fullProgramImg,
+    image: "/images/full-program.jpg",
     description: "Master the complete workflow from SketchUp modeling to photorealistic rendering. Ideal for students and freelancers who want to create professional interior and exterior visualizations."
   },
   {
@@ -23,7 +19,7 @@ const courses = [
     price: "KSh 20,000",
     duration: "6 Weeks",
     tools: ["SketchUp"],
-    image: modelingImg,
+    image: "/images/sketchupmodelling.png",
     description: "Learn how to create clean, accurate 3D models for architectural and interior projects. Perfect for beginners or those focusing on design development."
   },
   {
@@ -32,7 +28,7 @@ const courses = [
     price: "KSh 10,000",
     duration: "6 Weeks",
     tools: ["Enscape", "V-Ray", "D5 Render", "Twinmotion"],
-    image: renderingImg,
+    image: "/images/rendering.png",
     description: "Turn your models into high-quality, realistic visuals using industry-standard rendering tools for interiors and exteriors."
   }
 ];
@@ -126,7 +122,7 @@ export default function Home() {
             <div className="relative">
               <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl">
                <img 
-  src={workspaceImage}
+  src="/images/workspace.jpg"
   alt="Learning Environment" 
   className="w-full h-full object-cover"
 />
