@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 const projects = [
   { title: "Modern Villa", category: "Architecture", image: "/projects/villa.jpg" },
   { title: "Scandi Interior", category: "Interior", image: "/projects/scandi.webp" },
-  { title: "Office Lobby", category: "Commercial", image: "/projects/RECEPTION AREA.jpg" },
+  { title: "Office Lobby", category: "Commercial", image: "/projects/reception-area.jpg" },
   { title: "Kitchen Detail", category: "Interior", image: "/projects/kitchen.jpg" },
   { title: "Urban Plaza", category: "Architecture", image: "/projects/urban.jpg" },
   { title: "Master Bedroom", category: "Interior", image: "/projects/bedroom.jpg" }

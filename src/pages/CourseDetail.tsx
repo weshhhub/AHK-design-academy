@@ -63,7 +63,7 @@ export default function CourseDetail() {
   return (
     <div className="pt-20 pb-24">
       <div className="relative h-[50vh] overflow-hidden">
-        <img src={course.image} alt={course.title} className="w-full h-full object-cover" />
+        <img src={course.image} alt={course.title} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
         <div className="absolute inset-0 bg-black/60 flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>

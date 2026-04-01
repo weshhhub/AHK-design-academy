@@ -21,7 +21,7 @@ export default function Navbar() {
 
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-           <img src="/images/1.png" className="h-10 w-auto" />
+           <img src="/images/1.png" className="h-10 w-auto" referrerPolicy="no-referrer" />
             <span className="text-xl font-bold tracking-tight">
               AHK <span className="text-accent">DESIGN</span> ACADEMY
             </span>

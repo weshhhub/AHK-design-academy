@@ -69,6 +69,7 @@ export default function Hero() {
   src="/images/hero.png"
   alt="3D Visualization Render" 
   className="w-full h-full object-cover rounded-2xl shadow-xl"
+  referrerPolicy="no-referrer"
 />
             </div>
             {/* Floating Card */}

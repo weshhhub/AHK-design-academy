@@ -18,6 +18,7 @@ export default function About() {
   src="/images/about.png"
   alt="About AHK Design Academy"
   className="w-full rounded-xl"
+  referrerPolicy="no-referrer"
 />
           </div>
           <div>

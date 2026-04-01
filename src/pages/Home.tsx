@@ -125,6 +125,7 @@ export default function Home() {
   src="/images/workspace.jpg"
   alt="Learning Environment" 
   className="w-full h-full object-cover"
+  referrerPolicy="no-referrer"
 />
               </div>
               <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-accent/20 blur-3xl rounded-full" />
