@@ -8,7 +8,7 @@ const courses = [
     id: "full-program",
     title: "3D Modeling & Rendering (Full Program)",
     price: "KSh 30,000",
-    duration: "6–8 Weeks",
+    duration: "8 Weeks",
     tools: ["SketchUp", "Enscape", "V-Ray", "D5 Render", "Twinmotion"],
     image: "/images/full-program.jpg",
     description: "Master the complete workflow from SketchUp modeling to photorealistic rendering. Ideal for students and freelancers who want to create professional interior and exterior visualizations."
@@ -26,7 +26,7 @@ const courses = [
     id: "rendering-only",
     title: "Rendering & Visualization",
     price: "KSh 10,000",
-    duration: "6 Weeks",
+    duration: "2 Weeks",
     tools: ["Enscape", "V-Ray", "D5 Render", "Twinmotion"],
     image: "/images/rendering.png",
     description: "Turn your models into high-quality, realistic visuals using industry-standard rendering tools for interiors and exteriors."

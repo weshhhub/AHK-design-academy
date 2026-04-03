@@ -39,17 +39,13 @@ const courseData: Record<string, any> = {
   "rendering-only": {
     title: "Rendering Only",
     price: "KSh 10,000",
-    duration: "6 Weeks",
+    duration: "2 Weeks",
     tools: ["Enscape", "V-Ray", "D5", "Twinmotion"],
     image: "/images/rendering.png",
     description: "Transform your models into photorealistic masterpieces. This course is for those who already know how to model but want to master visualization.",
     modules: [
-      { week: "Week 1", title: "Enscape Fundamentals", desc: "Real-time rendering for fast results." },
-      { week: "Week 2", title: "V-Ray Basics", desc: "Global illumination and camera settings." },
-      { week: "Week 3", title: "Advanced Materials", desc: "PBR textures and custom shaders." },
-      { week: "Week 4", title: "D5 Render", desc: "Animations and high-end stills." },
-      { week: "Week 5", title: "Lighting Setups", desc: "Studio, day, and night lighting." },
-      { week: "Week 6", title: "Visual Storytelling", desc: "Composition and post-processing." }
+      { week: "Week 1", title: "Real-time Rendering & Basics", desc: "Mastering Enscape and V-Ray fundamentals for fast, high-quality results." },
+      { week: "Week 2", title: "Advanced Materials & Lighting", desc: "PBR textures, D5 Render animations, and professional lighting setups." }
     ]
   }
 };
