@@ -46,12 +46,12 @@ export default function Enroll() {
       start_date: formattedDate,
     };
 
-    console.log(import.meta.env);
+    //console.log(import.meta.env);
     const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-    console.log(serviceId, templateId, publicKey);
+    //console.log(serviceId, templateId, publicKey);
 
     if (!serviceId || !templateId || !publicKey) {
       console.error('EmailJS configuration is missing. Please set VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, and VITE_EMAILJS_PUBLIC_KEY in your environment variables.');
