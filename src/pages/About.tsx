@@ -6,7 +6,7 @@ export default function About() {
     <div className="pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-20">
-          <h1 className="text-5xl mb-6">Empowering Kenya's Next Generation of Designers</h1>
+          <h1 className="text-5xl mb-6">Empowering the Next Generation of Designers</h1>
           <p className="text-xl text-gray-600 leading-relaxed">
             AHK Design Academy was founded with a single mission: to bridge the gap between academic theory and industry-standard 3D visualization skills.
           </p>
