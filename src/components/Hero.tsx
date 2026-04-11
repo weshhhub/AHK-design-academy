@@ -20,7 +20,7 @@ export default function Hero() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
               </span>
-              Next Intake: April 5th • Limited Slots
+              Next Intake: April 13th • Limited Slots
             </div>
             
             <h1 className="text-5xl md:text-7xl mb-6 leading-[1.1]">
