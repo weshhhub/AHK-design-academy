@@ -23,7 +23,7 @@ const allCourses = [
     id: "rendering-only",
     title: "Rendering Only",
     price: "KSh 10,000",
-    duration: "2 Weeks",
+    duration: "6 Weeks",
     tools: ["Enscape", "V-Ray", "D5", "Twinmotion"],
     image: "/images/rendering.png",
     description: "Transform your models into photorealistic masterpieces."
