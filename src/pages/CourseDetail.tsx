@@ -47,6 +47,47 @@ const courseData: Record<string, any> = {
       { week: "Week 1", title: "Real-time Rendering & Basics", desc: "Mastering Enscape and V-Ray fundamentals for fast, high-quality results." },
       { week: "Week 2", title: "Advanced Materials & Lighting", desc: "PBR textures, D5 Render animations, and professional lighting setups." }
     ]
+  },
+  "autocad": {
+    title: "AutoCAD",
+    price: "KSh 7,499",
+    duration: "4 Weeks",
+    tools: ["AutoCAD"],
+    image: "/projects/urban.jpg",
+    description: "Master 2D drafting and technical documentation. Ideal for creating clean, professional architectural plans and construction drawings.",
+    modules: [
+      { week: "Week 1", title: "AutoCAD Basics", desc: "Interface, navigation, and basic drawing tools." },
+      { week: "Week 2", title: "Detailed Drafting", desc: "Layers, blocks, and precision drawing techniques." },
+      { week: "Week 3", title: "Annotation & Layouts", desc: "Dimensions, text, and setting up plot layouts." },
+      { week: "Week 4", title: "Project Workflow", desc: "Finalizing a complete set of architectural plans." }
+    ]
+  },
+  "twinmotion": {
+    title: "Twinmotion",
+    price: "KSh 9,999",
+    duration: "3 Weeks",
+    tools: ["Twinmotion"],
+    image: "/projects/villa.jpg",
+    description: "Learn to create high-end architectural animations and real-time immersive renderings using Twinmotion.",
+    modules: [
+      { week: "Week 1", title: "Scene Setup", desc: "Importing models, materials, and environment settings." },
+      { week: "Week 2", title: "Assets & Life", desc: "Adding vegetation, characters, and realistic lighting." },
+      { week: "Week 3", title: "Animation & VR", desc: "Creating walkthrough videos and immersive experiences." }
+    ]
+  },
+  "archicad": {
+    title: "ArchiCAD",
+    price: "KSh 24,999",
+    duration: "8 Weeks",
+    tools: ["ArchiCAD"],
+    image: "/projects/kitchen.jpg",
+    description: "Master BIM (Building Information Modeling) and architectural design from concept to construction documentation.",
+    modules: [
+      { week: "Week 1-2", title: "BIM Concepts", desc: "Modeling walls, floors, and basic structures." },
+      { week: "Week 3-4", title: "Advanced Objects", desc: "Custom libraries, stairs, and roof systems." },
+      { week: "Week 5-6", title: "Documentation", desc: "Generating sections, elevations, and schedules." },
+      { week: "Week 7-8", title: "Advanced Workflow", desc: "Teamwork, classification, and final project." }
+    ]
   }
 };
 

@@ -17,6 +17,9 @@ export default function Enroll() {
       if (courseParam === 'full-program') setSelectedCourse('Full Program (KSh 30,000)');
       else if (courseParam === 'modeling-only') setSelectedCourse('Modeling Only (KSh 20,000)');
       else if (courseParam === 'rendering-only') setSelectedCourse('Rendering Only (KSh 10,000)');
+      else if (courseParam === 'autocad') setSelectedCourse('AutoCAD (KSh 7,499)');
+      else if (courseParam === 'twinmotion') setSelectedCourse('Twinmotion (KSh 9,999)');
+      else if (courseParam === 'archicad') setSelectedCourse('ArchiCAD (KSh 24,999)');
     }
   }, [searchParams]);
 
@@ -175,6 +178,9 @@ export default function Enroll() {
                   <option value="Full Program (KSh 30,000)">Full Program (KSh 30,000)</option>
                   <option value="Modeling Only (KSh 20,000)">Modeling Only (KSh 20,000)</option>
                   <option value="Rendering Only (KSh 10,000)">Rendering Only (KSh 10,000)</option>
+                  <option value="AutoCAD (KSh 7,499)">AutoCAD (KSh 7,499)</option>
+                  <option value="Twinmotion (KSh 9,999)">Twinmotion (KSh 9,999)</option>
+                  <option value="ArchiCAD (KSh 24,999)">ArchiCAD (KSh 24,999)</option>
                 </select>
               </div>
 

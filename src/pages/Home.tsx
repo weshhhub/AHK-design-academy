@@ -30,6 +30,33 @@ const courses = [
     tools: ["Enscape", "V-Ray", "D5 Render", "Twinmotion"],
     image: "/images/rendering.png",
     description: "Turn your models into high-quality, realistic visuals using industry-standard rendering tools for interiors and exteriors."
+  },
+  {
+    id: "autocad",
+    title: "AutoCAD",
+    price: "KSh 7,499",
+    duration: "4 Weeks",
+    tools: ["AutoCAD"],
+    image: "/projects/urban.jpg",
+    description: "Master 2D drafting and technical documentation for architectural plans."
+  },
+  {
+    id: "twinmotion",
+    title: "Twinmotion",
+    price: "KSh 9,999",
+    duration: "3 Weeks",
+    tools: ["Twinmotion"],
+    image: "/projects/villa.jpg",
+    description: "Fast-track your high-end architectural animations and real-time immersive renderings."
+  },
+  {
+    id: "archicad",
+    title: "ArchiCAD",
+    price: "KSh 24,999",
+    duration: "8 Weeks",
+    tools: ["ArchiCAD"],
+    image: "/projects/kitchen.jpg",
+    description: "Master BIM (Building Information Modeling) with powerful architectural design tools."
   }
 ];
 
